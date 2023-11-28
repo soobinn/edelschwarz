@@ -1,0 +1,177 @@
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+.text-con {
+    position: absolute;
+    top: 0;
+    & > section {
+        height: 100vh;
+    }
+}
+.text-wrapper {
+    background-color: #000;
+    position: relative;
+    height: 500vh;
+    & > section {
+        height: 100vh;
+    }
+}
+.text-bg {
+    position: absolute;
+    z-index: 10;
+    height: 85vh;
+    top: 0;
+    &.fixed {
+        position: fixed;
+        width: 100%;
+    }
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        content: "";
+        background: linear-gradient(
+            to top,
+            #000000 6%,
+            rgba(0, 0, 0, 0.9) 10.33%,
+            rgba(255, 255, 255, 0) 42%
+        );
+        pointer-events: none;
+    }
+}
+
+.con-text {
+    padding: 0px 150px;
+    position: relative;
+    @include desktop {
+        padding: 0 50px;
+    }
+    @include mobile {
+        padding: 0 10px;
+    }
+
+    .title {
+        color: #dcd7d2;
+        font-size: 30px;
+        line-height: 133%;
+        letter-spacing: 0em;
+        font-weight: 400;
+        @include tablet {
+            font-size: 18px;
+        }
+        @include mobile {
+            font-size: 15px;
+        }
+    }
+
+    .desc {
+        font-size: 9rem;
+        line-height: 100%;
+        letter-spacing: 0em;
+        margin-top: 4rem;
+        font-size: 69.5218px;
+        color: #8a8a8a;
+        @include desktop {
+            font-size: 50px;
+            line-height: 120%;
+        }
+        @include tablet {
+            font-size: 40px;
+        }
+        @include mobile {
+            font-size: 25px;
+        }
+
+        strong {
+            color: #fff;
+            font-size: 69.5218px;
+            @include desktop {
+                font-size: 6rem;
+            }
+            @include tablet {
+                font-size: 4rem;
+            }
+            @include mobile {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.bottle-wrap {
+    position: fixed;
+    bottom: 10rem;
+    transform: translate(-50%, 0%) translate(0.25px, 0px);
+    left: 50%;
+    z-index: 111;
+
+    @include desktop {
+        transform: translate(-50%, 0%) translate(0.25px, 0px) scale(0.7);
+    }
+    @include mobile {
+        transform: translate(-50%, 0%) translate(0.25px, 0px) scale(0.5);
+    }
+    .bottle-img {
+        z-index: 8;
+        position: absolute;
+        left: 50%;
+        width: 65.7rem;
+        height: 50rem;
+        bottom: 0rem;
+        transform: translateX(-50%);
+    }
+}
+
+.bottle-bg {
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    width: 100vw;
+    height: 16vh;
+    z-index: 7;
+    background: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.8) 53.65%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    transform: rotate(180deg);
+}
+
+.bg-group {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    .bg-box {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        transform-origin: center 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        &.on {
+            transform: translateX(-50%) scale(1);
+        }
+    }
+    .left,
+    .right {
+        bottom: 2.5rem;
+        width: 36.8rem;
+        height: 44.8rem;
+    }
+}
+
+.dark {
+    background-color: #000000;
+}

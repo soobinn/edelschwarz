@@ -1,0 +1,173 @@
+header {
+    position: fixed;
+    width: 100%;
+    padding: 0px 45px;
+    z-index: 999;
+    @include mobile {
+        padding: 19px;
+        bottom: 0;
+    }
+    .header-wrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+        z-index: 7;
+        @include mobile {
+            width: 100%;
+            justify-content: center;
+        }
+        .logo {
+            margin-top: 6rem;
+            @include mobile {
+                display: none;
+            }
+            svg {
+                width: 12rem;
+                height: auto;
+            }
+        }
+        .menu-list {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            @include mobile {
+                justify-content: center;
+            }
+        }
+        .menu-item {
+            .link-vodka,
+            .link-gin {
+                font-size: 15px;
+                line-height: 156%;
+                letter-spacing: 0em;
+                color: #8a8a8a;
+                font-weight: bold;
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+            .link-gin {
+                color: #dcd7d2;
+            }
+            .link-shop {
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 100%;
+                height: 4.5rem;
+                background-color: #dcd7d2;
+                color: #000000;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+                padding: 1rem 2rem;
+                border: 2px solid #dcd7d2;
+                border-radius: 500px;
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+
+            .fa-solid {
+                font-size: 4rem;
+                color: #fff;
+            }
+        }
+    }
+
+    .menu-wrap {
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+        height: 100%;
+        top: 100%;
+        background: black;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include desktop {
+            flex-direction: column;
+        }
+
+        left: 0;
+        .right {
+            padding-top: 20rem;
+            flex: 1 1;
+            height: 100%;
+            @include desktop {
+                display: none;
+            }
+        }
+        .nav2 {
+            padding-top: 20rem;
+            flex: 1 1;
+            height: 100%;
+            @include mobile {
+                padding-top: 100px;
+            }
+        }
+
+        .nav2-wrap {
+            padding: 0px 20px;
+            .link-wrap {
+                overflow: hidden;
+                padding-bottom: 20px;
+                // margin-top: 10px;
+                a {
+                    transform: translateY(150%);
+                    font-size: 80px;
+                    line-height: 100%;
+                    letter-spacing: -0.5px;
+                    font-weight: 500;
+
+                    display: block;
+                    color: #585654;
+                    @include desktop {
+                        font-size: 60px;
+                    }
+                    @include tablet {
+                        font-size: 40px;
+                    }
+                    @include mobile {
+                        font-size: 40px;
+                    }
+                }
+                a.link-gin {
+                    color: #dcd7d2;
+                }
+            }
+
+            .nav2-list {
+                margin-top: 9rem;
+                @include mobile {
+                    margin-top: 10px;
+                }
+                .nav2-item {
+                    line-height: 100%;
+                    letter-spacing: 0em;
+                    margin-bottom: 3rem;
+                    position: relative;
+                    overflow: hidden;
+                    a {
+                        transform: translateY(100%);
+                        display: block;
+                        font-size: 70px;
+                        font-weight: 300;
+                        letter-spacing: -0.2px;
+                        @include desktop {
+                            font-size: 40px;
+                        }
+                        @include tablet {
+                            font-size: 35px;
+                        }
+                        @include mobile {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
