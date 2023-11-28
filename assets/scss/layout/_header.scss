@@ -102,7 +102,6 @@ header {
         }
         .nav2 {
             padding-top: 20rem;
-            flex: 1 1;
             height: 100%;
             @include mobile {
                 padding-top: 100px;
@@ -140,7 +139,7 @@ header {
             }
 
             .nav2-list {
-                margin-top: 9rem;
+                margin-top: 5rem;
                 @include mobile {
                     margin-top: 10px;
                 }
@@ -153,7 +152,7 @@ header {
                     a {
                         transform: translateY(100%);
                         display: block;
-                        font-size: 70px;
+                        font-size: 45px;
                         font-weight: 300;
                         letter-spacing: -0.2px;
                         @include desktop {

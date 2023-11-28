@@ -425,9 +425,6 @@ header .menu-wrap .right {
 }
 header .menu-wrap .nav2 {
   padding-top: 20rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
   height: 100%;
 }
 @media (max-width: 767px) {
@@ -471,7 +468,7 @@ header .menu-wrap .nav2-wrap .link-wrap a.link-gin {
   color: #dcd7d2;
 }
 header .menu-wrap .nav2-wrap .nav2-list {
-  margin-top: 9rem;
+  margin-top: 5rem;
 }
 @media (max-width: 767px) {
   header .menu-wrap .nav2-wrap .nav2-list {
@@ -489,7 +486,7 @@ header .menu-wrap .nav2-wrap .nav2-list .nav2-item a {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   display: block;
-  font-size: 70px;
+  font-size: 45px;
   font-weight: 300;
   letter-spacing: -0.2px;
 }
